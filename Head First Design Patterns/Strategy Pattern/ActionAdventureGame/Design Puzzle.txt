@@ -1,0 +1,6 @@
+﻿1) Classes created
+2)  abstract class = Character
+    interface = Weaponbehaviour
+    classes = Knife, Axe, Sword, BowAndArrow, king,queen, knight, troll
+3) See PUML file
+4) set weapon behaviour in the character class

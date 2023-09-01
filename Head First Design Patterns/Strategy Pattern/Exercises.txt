@@ -1,0 +1,62 @@
+﻿***********************************************************************************************************************
+******************************************  Strategy Pattern  *********************************************************
+***********************************************************************************************************************
+Definition:
+The strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+Strategy lets the algorithm vary independently from clients that use it.
+***********************************************************************************************************************
+
+Sharpen your pencil
+Disadvantages of using inheritance:
+- runtime behaviours are difficult
+- its hard to gain knowledge of different behaviours
+- multiple methods may not be able to be applied simultaneously
+- unintentional changes 
+
+
+Sharpen your pencil
+ - changes to the superclass can affect the subclass
+ - extensions of a sub class rendering the superclass useless
+ - design no longer being applicable
+ 
+ Design Principle:
+-----------------------------------------------------------------------------------------
+Identify aspects of your application that vary and separate them from what stays the same
+ - take the parts that vary and encapsulate them so that later you can alter or extend the
+   parts that vary without affecting those that don't
+-----------------------------------------------------------------------------------------
+ 
+ Given a duck class, extract the moving behaviour into a separate class
+Behavioural inheritance:
+ - fly behaviour
+ - quack behaviour
+ 
+Design Principle:
+-----------------------------------------------------------------------------------------
+Program to an interface, not an implementation
+ - favour composition over inheritance
+ - encapsulate what varies
+ - programming to an implementation means that your code is dependent on the implementation
+   and will have to be changed if the implementation changes
+-----------------------------------------------------------------------------------------
+in the case of the duck, the fly behaviour becomes an interface with the specific implementations being sub classes 
+that implement the interface
+ 
+dog.bark(); => dog.makesound(); // where make sound implements the bark method
+cat.meow(); => cat.makesound(); // where make sound implements the meow method
+
+Sharpen your pencil:
+Q1) using the design pattern, what would you do if you needed to add rocket powered flying to the simUDuck app
+A1) create rocket powered flying interface that inherits from the fly interface
+
+Q2) Can you think of a class that might want to use the quake behaviour class that isnt a duck?
+A2) a swan class???
+
+
+Design Principle:
+-----------------------------------------------------------------------------------------
+Favor composition over inheritance
+ - has a relationship
+ - composition allows you to encapsulate a family of algorithms into their own set of classes
+   and makes it easy to add new algorithms without modifying any existing code
+-----------------------------------------------------------------------------------------

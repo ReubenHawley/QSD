@@ -1,0 +1,50 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+package client <<rectangle>>{
+    abstract class Character {
+    + WeaponBehavior weapon
+    + fight()
+    }
+    class King {
+    + fight()
+    }
+    class Queen {
+    + fight()
+    }
+    class Knight {
+    + fight()
+    }
+    class Troll {
+    + fight()
+    }
+}
+package Behaviour <<rectangle>>{
+    interface WeaponBehavior {
+        + useWeapon()
+    }
+    class KnifeBehavior {
+        + useWeapon()
+    }
+    class BowAndArrowBehavior {
+        + useWeapon()
+    }
+    class AxeBehavior {
+        + useWeapon()
+    }
+    class SwordBehavior {
+        + useWeapon()
+    }
+}
+Character <|-- King
+Character <|-- Queen
+Character <|-- Knight
+Character <|-- Troll
+WeaponBehavior <|.. KnifeBehavior
+WeaponBehavior <|.. BowAndArrowBehavior
+WeaponBehavior <|.. AxeBehavior
+WeaponBehavior <|.. SwordBehavior
+WeaponBehavior <|-- Character 
+
+
+@enduml
