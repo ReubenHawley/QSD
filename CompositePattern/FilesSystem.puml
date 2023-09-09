@@ -1,0 +1,35 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+
+class Explorer #lightBlue
+interface Component #lightBlue
+{
+    +Move(Component)
+    +Copy(Component)
+    +Delete(Component)
+    +Paste(Component)
+}
+class Composite #lightBlue
+{
+    -FileFolderNodes: List<Component>
+    +add(Component)
+    +remove(Component)
+    +getChild(int)
+}
+class ChildNode #lightBlue
+{
+    +Move(Component)
+    +Copy(Component)
+    +Delete(Component)
+    +Paste(Component)
+}
+
+Component <|-u- Explorer
+Component <|.. Composite
+Component <|.d. ChildNode
+Composite .r. ChildNode
+Composite "1" *--- "*" Component
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+
+class Client #lightBlue
+interface Component #lightBlue
+{
+    +operation()
+}
+class Composite #lightBlue
+{
+    -children: List<Component>
+    +add(Component)
+    +remove(Component)
+    +getChild(int)
+}
+class ChildNode #lightBlue
+{
+    +operation()
+}
+
+Component <|-u- Client
+Component <|.. Composite
+Component <|.d. ChildNode
+Composite .r. ChildNode
+Composite "1" *--- "*" Component
+
+@enduml
