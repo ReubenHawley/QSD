@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+title Crypto Trading platform
+activate Program
+Program -> Crypto ++: Start()
+box Observer #LightBlue
+Crypto --> Program --: void
+Program  -> Binance ++: Add(Metatrader)
+Program  <-- Binance --: void
+Program  -> Binance ++: Add(Algorithm)
+Program  <-- Binance --: void
+Program -> Crypto ++: setLatestHigh
+Program <-- Crypto --:void
+
+Program -> Binance ++:
+Binance -> Metatrader: Notify(Crypto)
+Metatrader -> Metatrader : Notify(Crypto)
+Binance <-- Metatrader: void
+Binance -> Algorithm: Notify()
+Algorithm -> Algorithm: Notify()
+Binance <-- Algorithm : void
+Binance --> Program --: void
+
+Program -> Crypto ++: setLatestLow
+Program <-- Crypto --: void
+
+Program -> Binance ++:
+Binance -> Metatrader: Notify(Crypto)
+Metatrader -> Metatrader : Notify(Crypto)
+Binance <-- Metatrader: void
+Binance -> Algorithm: Notify()
+Algorithm -> Algorithm: Notify()
+Binance <-- Algorithm : void
+Binance --> Program --: void
+deactivate Program
+
+end box
+
+@enduml

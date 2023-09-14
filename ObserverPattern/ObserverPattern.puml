@@ -1,0 +1,37 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+
+rectangle "Observer Pattern" as ObserverPattern {
+interface Observer #lightgreen{
+    + void update(ISubject subject)
+}
+class Observable #lightblue{
+    - List<Subscriber> Observers
+    + void addSubscriber(Observer observer)
+    + void removeSubscriber(Observer observer)
+    + void notifySubscribers(ISubject subject)
+}
+class ConcreteObserver #lightblue{
+    + void update(ISubject subject)
+}
+class Client #lightblue{
+    + void main()
+}
+}
+interface ISubject #lightgreen{
+}
+class ConcreteSubject #lightblue{
+}
+
+Client -u-> Observable
+Observer "1" *-l-- "*" Observable
+Observable --> Observer
+ConcreteObserver -u-> Observer
+ISubject <|-- ConcreteSubject 
+ISubject <|--U- Observable
+
+
+
+@enduml

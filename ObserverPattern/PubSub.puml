@@ -1,0 +1,30 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+
+interface Subscriber #lightgreen{
+    + void update(Context context))
+}
+class Publisher #lightblue{
+    - List<Subscriber> subscribers
+    + void addSubscriber(Subscriber subscriber)
+    + void removeSubscriber(Subscriber subscriber)
+    + void notifySubscribers()
+}
+class ConcreteSubscriber #lightblue{
+    + void update(Context context)
+}
+class Client #lightblue{
+    + void main()
+}
+
+Client -u-> Publisher
+Subscriber "1" *-l-- "*" Publisher
+Publisher --> Subscriber
+ConcreteSubscriber -u-> Subscriber 
+
+
+
+
+@enduml

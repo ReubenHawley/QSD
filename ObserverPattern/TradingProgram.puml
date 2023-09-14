@@ -1,0 +1,47 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+
+rectangle TradingSystem {
+    interface IObserver #lightgreen{
+        + void update(IAsset asset)
+    }
+    class Binance #lightblue{
+        - List<Subscriber> subscribers
+        + void addSubscriber(IObserver observer)
+        + void removeSubscriber(IObserver observer)
+        + void notifySubscribers()
+    }
+    class Algorithm1 #lightblue{
+        + void update(IAsset asset)
+    }
+    
+    class MetaTrader #lightblue{
+        + void update(IAsset asset)
+    }
+    class Client #lightblue{
+        + void main()
+    }
+    interface IAsset #lightgreen{
+        + String getName()
+        + double getPrice()
+    }
+    class Crypto #lightblue{
+        + String getName()
+        + double getPrice()
+    }
+    
+}
+
+Client -up-|> Binance
+Binance "1" *-l-- "*" IObserver
+Binance ..|> IObserver
+Algorithm1 .up.> IObserver 
+MetaTrader .up.> IObserver 
+IAsset <|-down- Crypto
+IAsset <|-left- IObserver
+
+
+
+@enduml

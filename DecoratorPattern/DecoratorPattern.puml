@@ -1,0 +1,28 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+rectangle "Decorator Pattern" as DecoratorPattern  {
+    interface Decorator #lightgreen{
+        - Component component
+        + void Execute()
+    }
+    class ConcreteDecorator #lightblue{
+        + void operation()
+    }
+    class ConcreteComponent #lightblue{
+        + void operation()
+    }
+    abstract class Component #lightblue{
+        + void operation()
+    }
+    
+    Decorator -up-|> Component 
+    ConcreteDecorator -left-|> Decorator 
+    ConcreteComponent -up-|> Component
+    Component "1" *--- "*" Decorator
+}
+
+
+
+@enduml

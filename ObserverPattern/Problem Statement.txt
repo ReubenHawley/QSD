@@ -1,0 +1,31 @@
+**Problem: Real-time Stock Price Monitoring**
+
+ 
+
+Imagine you are developing a financial trading application that displays real-time stock prices to users. 
+You need to ensure that when the price of a particular stock changes, all the relevant parts of the application 
+(such as user interface components, analytics modules, and trading algorithms) are notified and can react to the 
+change accordingly.
+
+**Solution using the Observer Design Pattern:**
+
+In this scenario, you can use the Observer Design Pattern to decouple the subject (the stock)
+ from its observers (the components interested in its price changes). Here's how you can implement it:
+1. **Subject (Stock):** Create a `Stock` class that represents a stock and maintains its current price. 
+    This class will have methods to register, remove, and notify observers.
+2. **Observer (Components):** Create observer classes (e.g., `PriceDisplay`, `AnalyticsModule`, `TradingAlgorithm`)
+    that need to react to changes in the stock price. These observer classes should implement a 
+    common interface (or inherit from a base class) that defines an `update()` method.
+3. **Register Observers:** When an observer (e.g., `PriceDisplay` or `TradingAlgorithm`) wants to 
+    monitor a particular stock, it registers itself with that stock object using the `registerObserver()` method.
+4. **Notify Observers:** Whenever the stock price changes (e.g., due to market fluctuations), the `Stock` 
+    class calls the `update()` method on each registered observer. Each observer can then take appropriate actions
+    based on the new stock price.
+
+By using the Observer Design Pattern in this scenario, you achieve the following benefits:
+
+- Loose coupling: The `Stock` class is decoupled from its observers. It doesn't need to know the specific types of observers or their implementations, making the code more maintainable and extensible.
+- Scalability: You can easily add or remove observers without modifying the `Stock` class, allowing you to scale your application with minimal changes.
+- Real-time updates: Observers receive updates as soon as the stock price changes, ensuring real-time data for different parts of your application.
+
+Overall, the Observer Design Pattern is a suitable solution for handling real-time event-driven scenarios like stock price monitoring where multiple components need to react to changes in a subject's state.
