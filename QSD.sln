@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QSD", "QSD\QSD.csproj", "{87B36883-448A-4C7F-9FC5-7A24F7303E1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Head First Design Patterns", "Head First Design Patterns\Head First Design Patterns.csproj", "{A969995F-D5A4-4CE5-B3A4-01EF3E3AFFB0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{CF8841BA-3513-4C28-B674-7775B6D7CA2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms_DataStructures", "Algorithms_DataStructures\Algorithms_DataStructures.csproj", "{2F889E81-6ABA-422F-9809-62C013C61DD8}"
@@ -18,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternTests", "Desig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodPattern", "FactoryMethodPattern\FactoryMethodPattern.csproj", "{E7254815-6BDD-4506-8B5C-B122908C3511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern", "FacadePattern\FacadePattern.csproj", "{F38382EA-BDB7-4CD8-B0E7-FAA6BF638021}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +28,6 @@ Global
 		{87B36883-448A-4C7F-9FC5-7A24F7303E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B36883-448A-4C7F-9FC5-7A24F7303E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B36883-448A-4C7F-9FC5-7A24F7303E1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A969995F-D5A4-4CE5-B3A4-01EF3E3AFFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A969995F-D5A4-4CE5-B3A4-01EF3E3AFFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A969995F-D5A4-4CE5-B3A4-01EF3E3AFFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A969995F-D5A4-4CE5-B3A4-01EF3E3AFFB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF8841BA-3513-4C28-B674-7775B6D7CA2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF8841BA-3513-4C28-B674-7775B6D7CA2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF8841BA-3513-4C28-B674-7775B6D7CA2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -60,5 +56,9 @@ Global
 		{E7254815-6BDD-4506-8B5C-B122908C3511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7254815-6BDD-4506-8B5C-B122908C3511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7254815-6BDD-4506-8B5C-B122908C3511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38382EA-BDB7-4CD8-B0E7-FAA6BF638021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38382EA-BDB7-4CD8-B0E7-FAA6BF638021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38382EA-BDB7-4CD8-B0E7-FAA6BF638021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38382EA-BDB7-4CD8-B0E7-FAA6BF638021}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
