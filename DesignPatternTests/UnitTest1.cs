@@ -1,4 +1,5 @@
 using ObserverPattern.TradingApp;
+using Xunit;
 
 namespace DesignPatternTests;
 

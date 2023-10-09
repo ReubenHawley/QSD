@@ -1,0 +1,35 @@
+@startuml
+skinparam style strictuml
+skinparam linetype ortho
+skinparam backgroundColor #EEEBDC
+top to bottom direction
+rectangle "Factory Method" as FactoryMethod  {
+    abstract class Creator #lightgreen{
+        + SomeOperation(): IProduct
+    }
+    class ConcreteCreatorA #lightblue{
+        + SomeOperation(): IProduct
+    }
+    class ConcreteCreatorB #lightblue{
+        + SomeOperation(): IProduct
+    }
+    interface IProduct #lightblue{
+        + DoStuff(): void
+    }
+    class ConcreteProductA #lightblue{
+        
+    }
+    class ConcreteProductB #lightblue{
+        
+    }
+    
+    Creator ...|> IProduct 
+    ConcreteCreatorA -up-|> Creator 
+    ConcreteCreatorB -up-|> Creator 
+    ConcreteProductA .up.|> IProduct 
+    ConcreteProductB .up.|> IProduct 
+}
+
+
+
+@enduml

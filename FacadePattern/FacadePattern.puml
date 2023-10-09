@@ -1,0 +1,24 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+class Facade {
+    + Facade(Subsystem1, Subsystem2, Subsystem3)
+}
+class Subsystem1 {
+    + method1()
+}
+class Subsystem2 {
+    + method2()
+}
+class Subsystem3 {
+    + method3()
+}
+class Client {
+    + main(Facade)
+}
+
+Client --> Facade
+Facade ..> Subsystem1
+Facade ..> Subsystem2
+Facade ..> Subsystem3
+@enduml
