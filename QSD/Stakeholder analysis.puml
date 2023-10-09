@@ -1,0 +1,24 @@
+@startuml
+
+!define TableStyle class
+!define TableContent class
+
+rectangle Stakeholder {
+  Stakeholder
+}
+
+TableContent {
+  | CEO/Management | High | High
+  | Product Development Team | High | High
+  | Marketing Team | Medium | Medium
+  | Sales Team | Medium | Medium
+  | Legal Team | High | High
+  | Junior Developers | High | High
+  | Senior Developers | High | High
+  | Development Managers | High | High
+  | End Users | High | High
+  | Customers/Potential Buyers | High | High
+  | Investors and Shareholders | Medium | Medium
+}
+
+@enduml

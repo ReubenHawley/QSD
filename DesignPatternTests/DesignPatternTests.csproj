@@ -23,9 +23,15 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\Adapter\Adapter.csproj"/>
+        <ProjectReference Include="..\Algorithms_DataStructures\Algorithms_DataStructures.csproj"/>
       <ProjectReference Include="..\CompositePattern\CompositePattern.csproj" />
       <ProjectReference Include="..\DecoratorPattern\DecoratorPattern.csproj" />
+        <ProjectReference Include="..\Head First Design Patterns\Head First Design Patterns.csproj"/>
       <ProjectReference Include="..\ObserverPattern\ObserverPattern.csproj" />
+        <ProjectReference Include="..\QSD\QSD.csproj"/>
+        <ProjectReference Include="..\Recursie\Recursie.csproj"/>
+        <ProjectReference Include="..\Sorting\Sorting.csproj"/>
       <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj" />
     </ItemGroup>
 
